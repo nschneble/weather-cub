@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct Weather_CubApp: App {
+struct MenuBearApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+        Settings { EmptyView() } // we use only the status bar menu
     }
 }
